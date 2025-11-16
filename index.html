@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoyo Emocional para Jóvenes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="index-body">
+
+    <!-- ====== PORTADA ====== -->
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Bienvenido/a</h1>
+            <p class="hero-text">
+                Este es un espacio seguro para jóvenes donde puedes respirar,
+                expresarte y encontrar apoyo emocional.
+            </p>
+        </div>
+    </header>
+
+    <!-- ====== EJERCICIOS DE REGULACIÓN ====== -->
+    <section class="section">
+        <h2>Ejercicios de Regulación Emocional</h2>
+        <div class="card-container">
+
+            <div class="card">
+                <h3>Respiración Guiada</h3>
+                <p>Inhala 4s – Retén 4s – Exhala 4s</p>
+                <button onclick="iniciarRespiracion()">Empezar</button>
+            </div>
+
+            <div class="card">
+                <h3>Técnica 5-4-3-2-1</h3>
+                <p>Grounding para regresar al presente.</p>
+                <button onclick="mostrarTecnica()">Ver guía</button>
+            </div>
+
+            <div class="card">
+                <h3>Música Relajante</h3>
+                <p>Playlist recomendada para calmar la mente.</p>
+                <a href="https://open.spotify.com/" target="_blank">
+                    <button>Escuchar</button>
+                </a>
+            </div>
+
+            <div class="card">
+                <h3>Mini Meditaciones</h3>
+                <p>Lecturas cortas para bajar la tensión.</p>
+                <button onclick="mostrarMeditacion()">Leer</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ====== REGISTRO DE ESTADO DE ÁNIMO ====== -->
+    <section class="section">
+        <h2>Registro de Estado de Ánimo</h2>
+
+        <div class="mood-box">
+            <p>¿Cómo te sientes hoy?</p>
+
+            <div class="emoji-container">
+                <span onclick="registrarAnimo('😀')">😀</span>
+                <span onclick="registrarAnimo('🙂')">🙂</span>
+                <span onclick="registrarAnimo('😐')">😐</span>
+                <span onclick="registrarAnimo('🙁')">🙁</span>
+                <span onclick="registrarAnimo('😢')">😢</span>
+            </div>
+
+            <p id="ultimo-estado" class="last-mood"></p>
+            <p id="consejo" class="advice"></p>
+        </div>
+    </section>
+
+    <!-- ====== RECURSOS ====== -->
+    <section class="section">
+        <h2>Recursos de Ayuda</h2>
+
+        <div class="resource-list">
+            <a href="#" class="resource-item">📘 Guía PDF: Manejo del Estrés</a>
+            <a href="#" class="resource-item">💚 Hábitos para una mente sana</a>
+            <a href="#" class="resource-item">📞 Líneas de ayuda por país</a>
+            <a href="#" class="resource-item">🏥 Centros psicológicos recomendados</a>
+        </div>
+    </section>
+
+    <!-- ====== CHAT DE APOYO SIMULADO ====== -->
+    <section class="section">
+        <h2>Chat de Apoyo (Simulado)</h2>
+
+        <div class="chat-box" id="chat-box">
+            <div class="chat-msg bot">Hola, estoy aquí para acompañarte. ¿Cómo te sientes hoy?</div>
+        </div>
+
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Escribe tu mensaje...">
+            <button onclick="enviarMensaje()">Enviar</button>
+        </div>
+
+        <p class="chat-warning">
+            *Este chat es solo una demostración y no reemplaza ayuda profesional.*
+        </p>
+    </section>
+
+    <!-- ====== CONSEJOS / ARTÍCULOS ====== -->
+    <section class="section">
+        <h2>Consejos y Artículos</h2>
+
+        <div class="article-list">
+            <div class="article-item">📌 Cómo manejar la ansiedad antes de estudiar</div>
+            <div class="article-item">📌 Cómo hablar de tus emociones</div>
+            <div class="article-item">📌 Qué hacer cuando te sientes triste</div>
+            <div class="article-item">📌 Técnicas rápidas para calmar la mente</div>
+        </div>
+    </section>
+
+    <!-- ====== FORMULARIO DE CONTACTO ====== -->
+    <section class="section">
+        <h2>Contacto</h2>
+
+        <form class="contact-form" onsubmit="return enviarContacto(event)">
+            <input type="text" placeholder="Nombre (opcional)">
+            <input type="number" placeholder="Edad">
+            <textarea placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+            <div class="contact-buttons">
+                <button type="submit">Enviar</button>
+                <button type="button" onclick="guardarBorrador()">Guardar borrador</button>
+            </div>
+
+            <p class="chat-warning">
+                *Tu información es confidencial. Este formulario es solo demostrativo.*
+            </p>
+        </form>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer">
+        <p>Proyecto de Apoyo Emocional © 2025</p>
+        <p>No reemplaza atención psicológica profesional.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
